@@ -5,3 +5,5 @@ function VideoList() {
         
     </div>
 }
+
+export default VideoList;

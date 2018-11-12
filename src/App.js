@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Browser from './components/Browser/Browser'
+import VideoPlayer from './components/VideoPlayer/VideoPlayer'
 import './App.css';
 
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Browser/>
+          <VideoPlayer/>
         </header>
       </div>
     );

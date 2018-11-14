@@ -5,3 +5,5 @@ function VideoItem() {
         
     </div>
 }
+
+export default VideoItem;

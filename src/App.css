@@ -8,6 +8,10 @@
   width: 50%;
 }
 
+.margin-all {
+  margin : 5rem;
+}
+
 /* .App {
   text-align: center;
 }

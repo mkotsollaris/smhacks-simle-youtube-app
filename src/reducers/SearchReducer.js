@@ -1,6 +1,7 @@
+
 export default function() {
     return {
-        videoId: "",
-        videListItems: []
+        searchKey: "Rona"
     }
 }
+

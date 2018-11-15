@@ -1,16 +1,33 @@
 import React, { Component } from "react";
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
+import { searchByTerm } from "../actions";
+import { bindActionCreators } from "redux";
 
 class SearchBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchTerm: ''
+        }
+    }
+
   renderSearchKey() {}
 
+  updateSearchTerm(e) {
+      console.log('e: ',e.target.value);
+    this.setState({
+        searchTerm: e.target.value
+    });
+  }
+
   render() {
-    console.log("props:", this.props);
+    
     return (
       <div>
         <div className="center">
           <label>Search: </label>
-          <input className="search-bar-div" />
+          <input className="search-bar-div" value={this.state.searchTerm} onChange={ e => this.updateSearchTerm(e)}/>
+          <button onClick={()=>this.props.searchKey('key')}/>
         </div>
       </div>
     );
@@ -19,8 +36,15 @@ class SearchBar extends Component {
 
 function mapStateToProps(state) {
   return {
-    videos: state.videos
+    searchKey: 'mkey'
   };
 }
 
-export default connect(mapStateToProps)(SearchBar);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ searchKey: searchByTerm }, dispatch);
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchBar);

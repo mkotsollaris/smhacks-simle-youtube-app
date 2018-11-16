@@ -14,7 +14,7 @@ class VideoPlayer extends React.Component {
      
         return (
           <YouTube
-            videoId={this.props.selectedVideo && this.props.selectedVideo.videoId}
+            videoId={this.props.videoId}
             host='https://www.youtube.com'
             opts={opts}
             onReady={this._onReady}

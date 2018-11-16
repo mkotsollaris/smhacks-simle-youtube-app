@@ -1,6 +1,6 @@
 .search-bar-div {
   width: 60%;
-  text-align: center; 
+  text-align: center;
 }
 
 .center {
@@ -9,9 +9,32 @@
 }
 
 .margin-all {
-  margin : 5rem;
+  margin: .5rem;
 }
 
 .search-button {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.aside-1 {
+  order: 1;
+  max-width: 10rem;
+}
+
+.aside-2 {
+  order: 2;
+  max-width: 30rem;
+}
+
+.small-margin {
+  margin: .2rem;
+}
+
+.unset-text-align {
+  text-align: unset;
 }

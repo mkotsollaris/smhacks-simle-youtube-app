@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import VideoRenderer from "./VideoRenderer";
 import YTSearch from 'youtube-api-search'
-const API_KEY = "";
+const API_KEY = "AIzaSyARpX4Du9v6YWdmwq1x3tkPo_5H4-2AcDM";
 
 class Browser extends React.Component {
 
@@ -15,6 +15,10 @@ class Browser extends React.Component {
 
   setInputState(event) {
     this.setState({ term: event.target.value });
+  }
+
+  onVideoSelectClick = (video) => {
+    
   }
 
   onSearchHandler = (searchTerm) => {

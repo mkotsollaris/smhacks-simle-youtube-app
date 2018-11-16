@@ -25,8 +25,7 @@ class SearchBar extends Component {
       <div>
         <div className="center">
           <input className="search-bar-div unset-text-align" value={this.state.searchTerm} onChange={e => this.updateSearchTerm(e)}/>
-          <button
-            className="search-button" onClick={() => this.getRequest()}>
+          <button className="search-button" onClick={() => this.getRequest()}>
             Search
           </button>
         </div>

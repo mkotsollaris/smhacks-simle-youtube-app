@@ -1,12 +1,16 @@
 import React from "react";
 
+function onVideoSelectClick(video) {
+    console.log('video!',video);
+}
+
 function VideoList(props) {
   return (
     <div>
       {props.videos &&
         props.videos.map(video => {
           return (
-            <div className="wrapper">
+            <div className="wrapper" onClick={() => onVideoSelectClick(video)}>
               <aside className="aside-1 small-margin">
                 <div>
                   <img

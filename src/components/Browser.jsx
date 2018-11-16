@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import VideoRenderer from "./VideoRenderer";
 import YTSearch from 'youtube-api-search'
-const API_KEY = "AIzaSyARpX4Du9v6YWdmwq1x3tkPo_5H4-2AcDM";
+const API_KEY = "";
 
 class Browser extends React.Component {
 

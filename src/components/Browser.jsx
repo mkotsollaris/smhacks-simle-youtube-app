@@ -12,21 +12,11 @@ class Browser extends React.Component {
     };
   }
 
-  setInputState(event) {
-    this.setState({ term: event.target.value });
-  }
-
-  onVideoSelectClick = video => {};
+  onVideoSelectClick = video => {
+    console.log('selected video: ',video);
+  };
 
   onSearchHandler = searchTerm => {
-    console.log("searchTerm: ", searchTerm);
-    var url = "https://www.googleapis.com/youtube/v3/search";
-    var params = {
-      part: "snippet",
-      key: API_KEY,
-      q: searchTerm
-    };
-    console.log("this:", this);
     YTSearch({ key: API_KEY, term: searchTerm }, videos => {
       this.setState({
         videos: videos
@@ -38,7 +28,10 @@ class Browser extends React.Component {
     return (
       <div>
         <SearchBar onChange={this.onSearchHandler} />
-        <VideoRenderer videos={this.state.videos} />
+        <VideoRenderer
+          onSelect={this.onVideoSelectClick}
+          videos={this.state.videos}
+        />
       </div>
     );
   }

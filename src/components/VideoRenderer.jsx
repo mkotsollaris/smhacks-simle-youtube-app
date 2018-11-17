@@ -15,6 +15,6 @@ function VideoRenderer(props) {
       </div>
     </div>
   );
-}
+} 
 
 export default VideoRenderer;

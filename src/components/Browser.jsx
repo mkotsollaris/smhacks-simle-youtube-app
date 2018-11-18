@@ -2,7 +2,6 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import VideoRenderer from "./VideoRenderer";
 import YTSearch from "youtube-api-search";
-import { API_KEY } from "./_PRIVATE_CONFIG";
 
 class Browser extends React.Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class Browser extends React.Component {
   };
 
   onSearchHandler = searchTerm => {
-    YTSearch({ key: API_KEY, term: searchTerm }, videos => {
+    YTSearch({ key: 'AIzaSyDWUK8BJH9ZPDWW2ZMvX8Hwx-iDu_MJNAo', term: searchTerm }, videos => {
       this.setState({
         videos: videos
       });
